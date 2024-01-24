@@ -1,0 +1,23 @@
+<html>
+<body>
+<script>
+   var p = {
+      Name: 'Ram kumar',
+      Age: 27
+   };
+   var handler = {
+      get: function(target, prop) {
+         return prop in target ? target[prop] : 'Content developer';
+      }
+   };
+   var prox = new Proxy(p, handler);
+   document.write(prox.Name);
+   document.write("</br>");
+   document.write(prox.Age);
+   document.write("</br>");
+   document.write(prox.designation);
+   document.write("</br>");
+   document.write(prox.role);
+</script>
+</body>
+</html>
