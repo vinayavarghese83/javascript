@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Propagation Example</title>
+</head>
+<body>
+
+  <div id="outer">
+    <button id="inner">Click me!</button>
+  </div>
+
+  <script>
+    const outerElement = document.getElementById('outer');
+    const innerElement = document.getElementById('inner');
+
+    // Event listener during the capturing phase
+    outerElement.addEventListener('click', function (event) {
+      console.log('Capturing Phase: Outer Element');
+    }, true);
+
+    // Event listener during the bubbling phase
+    outerElement.addEventListener('click', function (event) {
+      console.log('Bubbling Phase: Outer Element');
+    });
+
+    // Event listener on the target element
+    innerElement.addEventListener('click', function (event) {
+      console.log('Target Phase: Inner Element');
+    });
+  </script>
+
+</body>
+</html>

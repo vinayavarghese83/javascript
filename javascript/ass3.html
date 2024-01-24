@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><script>
+
+let input = prompt("Enter the Principle amount,Rate of interest,Number of years seperated by comas:");
+
+let inputArray = input.split(',');
+ 
+let P=parseInt(inputArray[0]);
+let R=parseFloat(inputArray[1]);
+let N=parseFloat(inputArray[2]);
+
+if(!isNaN(P) && !isNaN(R) && !isNaN(N)){
+    let SI=((P*R*N)/100);
+    alert("The simple interest is : "+SI);
+}
+    else {
+        alert('invalid input');
+    }
+
+</script>
+</body>
+</html>

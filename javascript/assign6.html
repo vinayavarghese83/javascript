@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch case</title>
+</head>
+<body>
+    <script>
+        var dayString=prompt("Enter a Number from 1 to 7:");
+        var day=parseInt(dayString);
+        var result;
+        switch(day)
+        {
+            
+        case 1: result="SUNDAY";
+                break;
+        case 2: result="MONDAY";
+                break;
+        case 3: result="TUESDAY";
+                break;
+        case 4: result="WEDNESDAY";
+                break;
+        case 5: result="THURSDAY";
+                break;
+        case 6: result="FRIDAY";
+                break;
+        case 7: result="SATURDAY";
+                break;
+                
+        default:
+        result="INVALID";
+    }
+    
+    document.write(result);
+
+    </script>
+    
+</body>
+</html>

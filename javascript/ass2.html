@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><script>
+
+let input = prompt("Enter the  numbers seperated by comas:");
+
+let inputArray = input.split(',');
+ 
+let Number1=parseInt(inputArray[0]);
+let Number2=parseInt(inputArray[1]);
+
+if(!isNaN(Number1) && !isNaN(Number2)){
+    let sum=Number1 + Number2;
+    alert("The sum is : "+sum);
+}
+    else {
+        alert('invalid input');
+    }
+
+</script>
+</body>
+</html>

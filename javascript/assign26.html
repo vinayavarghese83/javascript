@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>myFilter Function with User Input</title>
+</head>
+<body>
+<p>Enter a list of numbers separated by commas:</p>
+<input type="text" id="inputArray">
+<br>
+<button onclick="calculateSum()">Calculate Sum</button>
+<br>
+<p id="result"></p>
+
+<script>
+function myFilter(myArray, callback) {
+  let sum = 0;
+  for (let i = 0; i < myArray.length; i++) {
+    if (callback(myArray[i])) {
+      sum += myArray[i];
+    }
+  }
+  return sum;
+}
+
+function isEven(num) {
+  return num % 2 === 0;
+}
+
+function calculateSum() {
+  const inputArray = document.getElementById('inputArray').value;
+  const numbers = inputArray.split(',').map(Number);
+  const result = myFilter(numbers, isEven);
+  document.getElementById('result').innerHTML = `The sum of even numbers is: ${result}`;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting User Input</title>
+</head>
+<body>
+    <form onsubmit="return processForm()">
+        <label for="written">Written Test :</label>
+        <input type="text" id="written" required><br><br>
+        <label for="Lab">Lab Exams :</label>
+        <input type="text" id="Lab" required><br><br>
+        <label for="Assignments">Assignments :</label>
+        <input type="text" id="Assignments" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function processForm() {
+            let written = document.getElementById("written").value;
+            let Lab = document.getElementById("Lab").value;
+            let Assignments = document.getElementById("Assignments").value;
+            let sum=(((written*70)/100)+((Lab*20)/100)+((Assignments*10)/100));
+            document.write("Grade of the student is " + sum + "!");
+            
+        }
+    </script>
+</body>
+</html>

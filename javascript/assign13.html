@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isPalindrome(str) { 
+	var rev=str.split("").reverse(); 
+    
+	if(rev == str){ 
+		document.write("The string "+str+ " is a pallindrome");
+	}
+    else{
+        document.write("The string "+str+ " is not pallindrome");
+    } 
+	
+				
+} 
+
+var str = prompt("Enter the string");
+
+
+console.log(isPalindrome(str)); 
+
+
+
+    </script>
+</body>
+</html>
